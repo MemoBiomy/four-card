@@ -14,6 +14,13 @@ body {
     padding: 80px 150px 0;
 } 
 
+@media (max-width: 375px) {
+    body {
+        height: auto;
+        padding: 80px 30px 0;
+    }
+}
+
 header {
     /* margin: 80px auto 40px;     */
 
@@ -39,6 +46,15 @@ header p {
     margin: 20px auto 0;
 }
 
+@media (max-width: 375px) {
+    header h1 {
+        font-size: 24px;
+    }
+    header h1 p {
+        font-size: 13px;
+    }
+}
+
 .cards {
     /* testing */
     height: calc(100vh - (162px + 80px));
@@ -52,6 +68,13 @@ header p {
     align-items: center;
 }
 
+@media (max-width: 375px) {
+    .cards {
+        height: auto;
+        display: block;
+    }
+}
+
 .cards > div {
     flex-basis: calc(33.3% - (60px / 3));
 }
@@ -60,7 +83,7 @@ header p {
     position: relative;
     padding: 30px 30px;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 8px;
     border-top: #4c4e61 solid 5px;
     height: 265px;
 
@@ -68,11 +91,25 @@ header p {
     box-shadow: 1px 1px 15px -5px #a3a5ae;
 }
 
+@media (max-width: 375px) {
+    .card {
+        margin: 0 auto 30px;
+        height: 245px;
+    }
+}
+
 .middle-holder {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+}
+
+@media (max-width: 375px) {
+    .middle-holder {
+        height: auto;
+        display: block;
+    }
 }
 
 .card .label {
@@ -90,6 +127,11 @@ header p {
     line-height: 1.6;
 }
 
+@media (max-width: 375px) {
+    .card .label span {
+        font-size: 13px;
+    }
+}
 
 /* green */
 .cards .card:first-child {
