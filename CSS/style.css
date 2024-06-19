@@ -8,20 +8,21 @@ body {
     background-color: #fafafa;
     font-family: "Poppins", sans-serif;
     font-style: normal;
-    max-height: 100vh;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
+
+    /* testing */
+    height: 100vh;
+    padding: 80px 150px 0;
+} 
 
 header {
-    margin: 80px auto 40px;    
+    /* margin: 80px auto 40px;     */
+
+    /* testing */
     text-align: center;
 }
 
 header h1 {
     font-weight: 200;
-    margin-bottom: 10px;
     color: #4c4e61;
 }
 
@@ -30,48 +31,88 @@ header h1 span {
     font-weight: 600;
 }
 
+
 header p {
     color: #a3a5ae;
     font-size: 15px;
     max-width: 500px;
-    margin: 20px auto 30px;
+    margin: 20px auto 0;
 }
 
 .cards {
+    /* testing */
+    height: calc(100vh - (162px + 80px));
+    /* margin-top: 60px; */
+    padding: 60px 0;
+
+    /* flex box */
     display: flex;
-    flex-flow: column wrap;
-    margin: 0 100px;
-    /* align-items: center; */
+    flex-wrap: wrap;
     justify-content: space-between;
-    flex: 1;
-    align-content: space-between;
+    align-items: center;
+}
+
+.cards > div {
+    flex-basis: calc(33.3% - (60px / 3));
 }
 
 .card {
+    position: relative;
     padding: 30px 30px;
     background-color: white;
     border-radius: 10px;
     border-top: #4c4e61 solid 5px;
-    height: 300px;
+    height: 265px;
+
+    /* box shadow */
+    box-shadow: 1px 1px 15px -5px #a3a5ae;
+}
+
+.middle-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card .label {
+    font-weight: 600;
+    color: #4c4e61;
+    font-size: 20px;
 }
 
 .card .label span {
     display: block;
     margin-top: 15px;
     color: #a3a5ae;
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 1.6;
 }
 
-.card-holder {
-    max-height: calc(50% - 20px);
-    min-height: calc(50% - 20px);
-    display: flex;
-    align-items: center;
-    width: calc(100% / 3 - 40px);
+
+/* green */
+.cards .card:first-child {
+    border-color: #45d3d3;
 }
 
-.card-holder:first-child,
-.card-holder:last-child {
-    align-items: center;
-    max-height: 100%;
-    min-height: 100%;
+/* blue */
+.cards .card:last-child {
+    border-color: #549ef2;
+}
+
+/* red */
+.middle-holder .card:first-child {
+    border-color: #ea5353;
+}
+
+/* yellow */
+.middle-holder .card:last-child {
+    border-color: #fcaf4a;
+}
+
+.card svg {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
 }
