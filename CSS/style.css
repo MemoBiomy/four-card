@@ -85,7 +85,8 @@ header p {
     background-color: white;
     border-radius: 8px;
     border-top: #4c4e61 solid 5px;
-    height: 265px;
+    min-height: 230px;
+    max-height: 265px;
 
     /* box shadow */
     box-shadow: 1px 1px 15px -5px #a3a5ae;
