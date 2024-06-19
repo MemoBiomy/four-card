@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github repo](https://github.com/MemoBiomy/four-card)
-- Live Site URL: [live site](https://your-live-site-url.com)
+- Live Site URL: [live site](https://memobiomy.github.io/four-card/)
 
 ## My process
 
